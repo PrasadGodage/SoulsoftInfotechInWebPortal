@@ -1,0 +1,3 @@
+Running command: /usr/local/cpanel/3rdparty/bin/git clone --origin=origin https://github.com/vbpawar/soulsoft.git /home/soulsoftinfotech/public_html
+
+Cloning into '/home/soulsoftinfotech/public_html'...
