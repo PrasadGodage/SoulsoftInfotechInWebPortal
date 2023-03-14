@@ -76,11 +76,151 @@ if(isset($_SESSION['username']))
 
 <div class="container">
 
-<div class="row">
-    
+ <div class="row" style="margin-left:70px;">
+
+ <!-- Set The Date  -->
+      <!-- <div class="col-md-12 col-sm-12 col-xs-12">
+        <form action="/action_page.php" style="margin-left: 800px; margin-top:30px; margin-bottom:60px;">
+        <div class="form-gruop">
+          <label for="date"><h4><strong>Date:</strong></h4></label>
+          <input type="date" id="date" name="date" value=""> -->
+          <!-- <input type="date" id="date" name="date" value="">
+        </div>
+        </form>
+    </div>
+    <br>
+    <br> -->
+<!---------- end ----------->
+
+<!-- <div class="col-md-12 col-sm-12 col-xs-12 shadow p-3">
+        <form class="form-horizontal" style="margin-left:20px;">        
+            <CENTER><h3><B>DAILY TRANSACTIONS</B></h3></CENTER><BR>
+
+              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-bottom:10px;">
+
+              <div class="col-md-2 col-xs-12">
+                </div>
+              
+              <div class="col-md-2 col-xs-12 text-center">
+                <div class="btn-group" role="group" aria-label="First group">
+                 <button type="button" class="btn btn-secondary p-3"><a href="Stock.php"><B><h5><strong>TOTAL</strong></h5></B></a></button> 
+                </div>
+              </div>
+               <div class="col-md-2 col-xs-12 text-center">
+                <div class="btn-group" role="group" aria-label="Second group">
+                 <button type="button" class="btn btn-secondary p-3"><a href="Stock.php"><B><h5><strong>CASH</strong></h5></B></a></button>
+                </div>
+               </div>
+               <div class="col-md-2 col-xs-12 text-center">
+                <div class="btn-group" role="group" aria-label="Third group">
+                 <button type="button" class="btn btn-secondary p-3"><a href="Stock.php"><B><h5><strong>BANK</strong></h5></B></a></button>
+                </div>
+               </div>
+              <div class="col-md-2 col-xs-12 text-center">
+                <div class="btn-group" role="group" aria-label="Third group">
+                 <button type="button" class="btn btn-secondary p-3"><a href="Stock.php"><B><h5><strong>CREDIT</strong></h5></B></a></button>
+                </div>
+              </div>
+              </div>
+      
+              <div class="row">
+                  <div class="form-horizontal">
+                      <div class="form-group col-md-12 col-xs-12">
+                          <div class="col-md-2 col-xs-12">
+                              <label class="control-label"><h5><strong>SALES</strong></h5></label>
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="percentage" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="flat" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="percentage" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="flat" class="form-control" type="text" placeholder="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="form-horizontal">
+                      <div class="form-group col-md-12 col-xs-12">
+                          <div class="col-md-2 col-xs-12">
+                              <label class="control-label"><h5><strong>PURCHASE</strong></h5></label>
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="percentage" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="flat" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="percentage" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="flat" class="form-control" type="text" placeholder="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="form-horizontal">
+                      <div class="form-group col-md-12 col-xs-12">
+                          <div class="col-md-2 col-xs-12">
+                              <label class="control-label"><h5><strong>RECEIPT</strong></h5></label>
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="percentage" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="flat" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="percentage" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="flat" class="form-control" type="text" placeholder="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="form-horizontal">
+                      <div class="form-group col-md-12 col-xs-12">
+                          <div class="col-md-2 col-xs-12">
+                              <label class="control-label"><h5><strong>PAYMENT</strong></h5></label>
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="percentage" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="flat" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="percentage" class="form-control" type="text" placeholder="">
+                          </div>
+                          <div class="col-md-2 col-xs-12">
+                              <input id="flat" class="form-control" type="text" placeholder="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+          </form>
+
+     </div> -->
+    <!-- --------- Transaction Table end ------------------- -->
+
+
         <div class="col-md-6 col-sm-12 col-xs-12">
           
-        <form class="form-horizontal">        
+        <form class="form-horizontal"  style="margin-top:100px;">        
             <CENTER><h3><B>OUTSTANDING</B></h3></CENTER><BR><BR><br>
             <div class="form-group">
             <label class="col-xs-4"><a href="SupplierOutstanding.php">Supplier Outstanding</a></label> 
@@ -99,8 +239,9 @@ if(isset($_SESSION['username']))
           </form>
         </div>
 
-            <div class="col-md-6 col-sm-12 col-xs-12">
-            <form class="form-horizontal">
+
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <form class="form-horizontal" style="margin-top:80px;">
             <CENTER><h3><B>STOCK</B></h3><BR>
             <button type="button" ><a href="Stock.php">STOCK STATMENT</a></button> <br> 
             </CENTER>      
@@ -145,7 +286,7 @@ if(isset($_SESSION['username']))
               </div>
             </div>          
          </form>
-            </div>
+     </div>
 
 </div>
 

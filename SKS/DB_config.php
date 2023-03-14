@@ -3,9 +3,14 @@ session_start();
 
 $servername = "localhost";
 
-$username = "soulsoftin_root";
 
+//------FOR WEB CONNECTION  ----------------
+$username = "soulsoftin_root";
 $password = "soulshiv@1987#Soul";
+
+//------FOR LOCAL CONNECTION  ----------------
+//$username = "root";
+//$password = "";
 
 //$dbname = "soulsoftin_Web_SksCustomer";
 // // $dbname = "soulsoftin_shopcare";
