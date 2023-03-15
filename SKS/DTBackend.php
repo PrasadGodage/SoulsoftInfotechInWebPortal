@@ -20,10 +20,15 @@
 
 // ?>
 
-
+<?php
+include 'DB_config.php';
+echo "test";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php include './header1.php';?>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,20 +74,13 @@
                           </div>
                           <?php
 
-                                $servername = "localhost";
-                                $username = "soulsoftin_root";
-                                $password = "soulshiv@1987#Soul";
-                                $dbName = "soulsoftin_SKS_Prasad";
-
-
-                                $con = mysqli_connect($servername, $username, $password, $dbName);
-
+                        
+                        
                           $date = $_POST['date']
                           echo $date;
                           
-                          $query = "SELECT * FROM `Daily_Transaction` WHERE `TnDate` = $date";
+                          $query = "SELECT * FROM `daily_transaction` WHERE `TnDate` = $date";
                           $ok = mysqli_query($con,$query);
-                          
                           if(mysqli_num_rows($ok) > 0)
                           {
                               while($row_fetch_assoc($ok))

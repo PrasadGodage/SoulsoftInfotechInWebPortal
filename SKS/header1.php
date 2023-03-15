@@ -75,7 +75,7 @@
 
         <div class="row">
 
-            <div class="col-md-2">
+            <div class="col-md-3">
 
                 <div class="main-logo">
 
@@ -85,7 +85,7 @@
 
             </div>
 
-            <div class="col-md-10 menu-column">
+            <div class="col-md-9 menu-column">
 
                 <nav class="main-menu">
 
@@ -119,6 +119,8 @@
 
                             <li><a href="DailyTransaction.php">Daily Transactions</a></li>
 
+                            <li><a href="TransactionHistory.php">Transactions History</a></li>
+
                             <li><a href="logout.php">Logout</a></li>
 
                         </ul>
@@ -134,6 +136,8 @@
                             <li><a href="Stock.php">Stock</a></li>
 
                             <li><a href="DailyTransaction.php">Daily Transactions</a></li>
+
+                            <li><a href="TransactionHistory.php">Transactions History</a></li>
 
                             <li><a href="logout.php">Logout</a></li>                          
 
