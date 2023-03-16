@@ -87,7 +87,7 @@ if($_SESSION['username']=="")
 
                 <div class="form-group col-md-12 col-xs-12">
 
-                    <div class="col-md-1 col-xs-12">
+                    <div class="col-md-2 col-xs-12">
                     </div>
 
                     <div class="col-md-2 col-xs-12">
@@ -103,12 +103,8 @@ if($_SESSION['username']=="")
                     <input type="date" id="todate" name="todate" class="form-gruop"/>
                     </div>
                     <div class="col-md-2 col-xs-12">
-                    <input type="submit" class="btn btn-info mt-5" name="ok" value="SHOW TRANSACTION Data" style="Float:left;">      
+                    <input type="submit" class="btn btn-info mt-5" name="ok" value="SHOW TRANSACTION Data">      
                     </div>
-
-                    <div class="col-md-1 col-xs-12">
-                    </div>
-
                 </div>
             </div>
         </div>    
