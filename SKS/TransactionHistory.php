@@ -34,10 +34,10 @@ if($_SESSION['username']=="")
           <?php
 
                // $connect = mysqli_connect("localhost", "soulsoftin_root", "Prasad@321", "soulsoftin_SKS");
-               $fromTimestamp =  date('Y-m-d');
-               $toTimestamp = date('Y-m-d');
+               $fromTimestamp =  date('d-m-Y');
+               $toTimestamp = date('d-m-Y');
                 $query = "SELECT `TnDate`,`totSales`,`cashSales`,`bankSales`,`creditSales`,`totPurchase`,`cashPurchase`,`bankPurchase`,`creditPurchase`,`totReceipt`,`cashReceipt`,`bankReceipt`,`totPayment`,`cashPayment`,`bankPayment` FROM `daily_transaction` WHERE `TnDate`>='$fromTimestamp' AND `TnDate`<='$toTimestamp'";
-
+               //  echo  $fromTimestamp ;
                $result = mysqli_query($con, $query);
 
           ?>
@@ -135,35 +135,35 @@ if($_SESSION['username']=="")
 
                                 <tr>
 
-                                <td>TnDate</td>
+                                <th  style="padding-right:32px; padding-left:32px;">TnDate</th>
 
-                                    <td>TotalSales</td>
+                                    <th>TotalSales</th>
 
-                                    <td>CashSales</td>
+                                    <th>CashSales</th>
 
-                                    <td>BankSales</td>
+                                    <th>BankSales</th>
 
-                                    <td>CreditSales</td>
+                                    <th>CreditSales</th>
 
-                                    <td>TotalPurchase</td>
+                                    <th>TotalPurchase</th>
 
-                                    <td>CashPurchase</td>
+                                    <th>CashPurchase</th>
 
-                                    <td>BankPurchase</td>
+                                    <th>BankPurchase</th>
 
-                                    <td>CreditPurchase</td>
+                                    <th>CreditPurchase</th>
 
-                                    <td>TotalReceipt</td>
+                                    <th>TotalReceipt</th>
 
-                                    <td>CashReceipt</td>
+                                    <th>CashReceipt</th>
 
-                                    <td>BankReceipt</td>
+                                    <th>BankReceipt</th>
                                     
-                                    <td>TotalPayment</td>
+                                    <th>TotalPayment</th>
 
-                                    <td>CashPayment</td>
+                                    <th>CashPayment</th>
 
-                                    <td>BankPayment</td>                        
+                                    <th>BankPayment</th>                        
 
                                 </tr>
 
@@ -178,12 +178,15 @@ if($_SESSION['username']=="")
                {
             //         $msg="Dear ".$row["Name"]." Your current outstanding balance is ".$row["Balance"];          
             //    $new = str_replace(' ', '%20', $msg);
+            
+               $orgDate = $row["TnDate"];
+               $newDate = date("d-m-Y", strtotime($orgDate));
 
                echo '
 
                <tr id="Table_Row">
 
-               <td>' . $row["TnDate"] . '</td>
+               <td>' . $newDate . '</td>
  
                <td>' . $row["totSales"] . '</td>
  
@@ -217,6 +220,9 @@ if($_SESSION['username']=="")
  
 
                     ';
+            
+            
+                   
                }                   
           ?>
 
@@ -348,7 +354,7 @@ if($_SESSION['username']=="")
 
 
 
-          #myInput {
+          /* #myInput {
 
           background-image: url('/css/searchicon.png');
 
@@ -366,7 +372,7 @@ if($_SESSION['username']=="")
 
           margin-bottom: 12px;
 
-          }
+          } */
 
      </style>
 

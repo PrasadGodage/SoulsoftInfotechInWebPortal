@@ -188,16 +188,16 @@ if($_SESSION['username']=="")
 
 ?>
 
-<CENTER><h2><B>DAILY TRANSACTIONS</B></h2></CENTER><BR><br>
+<CENTER><h2><B>DAILY TRANSACTIONS DETAILS</B></h2></CENTER><BR><br>
 
 <div class="col-md-12 col-sm-12 col-xs-12 p-3">
-    <form class="form-horizontal" style="margin-left:20px;" method="post">
+    <form class="form-horizontal" method="post">
         <div class="row">   
             <div class="form-horizontal">
 
                 <div class="form-group col-md-12 col-xs-12">
 
-                    <div class="col-md-5 col-xs-12">
+                    <div class="col-md-4 col-xs-12">
                     </div>
 
                     <div class="col-md-1 col-xs-12">
@@ -210,7 +210,7 @@ if($_SESSION['username']=="")
                     <input type="submit" class="btn btn-info mt-5" name="ok" value="SHOW TRANSACTION Data">      
                     </div>
 
-                    <div class="col-md-2 col-xs-12">
+                    <div class="col-md-3 col-xs-12">
                     </div>
                 </div>
             </div>
@@ -227,7 +227,7 @@ if($_SESSION['username']=="")
         <br>   
             <!-- <CENTER><h2><B>DAILY TRANSACTIONS</B></h2></CENTER><BR><br> -->
 
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-bottom:10px;">
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-bottom:20px; margin-left:30px;">
 
               <div class="col-md-2 col-xs-12">
                 </div>
@@ -358,10 +358,10 @@ if($_SESSION['username']=="")
             <?php include './footer1.php'; ?>
 
             <script>        
-        document.getElementById('date').valueAsDate = new Date();
+                 document.getElementById('date').valueAsDate = new Date();
 
-        function myFunction() {
-  alert("Hii");
-}
-    </script>
+                //         function myFunction() {
+                //   alert("Hii");
+                // }
+            </script>
     
