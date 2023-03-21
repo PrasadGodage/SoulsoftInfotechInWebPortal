@@ -105,14 +105,14 @@ if($_SESSION['username']=="")
 
                while ($row = mysqli_fetch_array($result)) 
                {
-                    $msg="Dear ".$row["Name"]." Your current outstanding balance is ".$row["Balance"];          
-               $new = str_replace(' ', '%20', $msg);
+               //      $msg="Dear ".$row["Name"]." Your current outstanding balance is ".$row["Balance"];          
+               // $new = str_replace(' ', '%20', $msg);
 
                echo '
 
                     <tr id="Table_Row">
 
-                         <td>' . $row["ItemId"] . '</a></td>
+                         <td>' . $row["ItemId"] . '</td>
 
                          <td>' . $row["ItemName"] . '</td>
 
@@ -122,7 +122,7 @@ if($_SESSION['username']=="")
 
                          <td>' . $row["StkQty"] . '</td>
 
-                         <td>' . $row["PurchaseRate"] . '</a></td>
+                         <td>' . $row["PurchaseRate"] . '</td>
 
                          <td>' . $row["CashRate"] . '</td>
 

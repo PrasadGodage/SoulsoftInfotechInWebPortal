@@ -9,7 +9,6 @@
 
 
 
-
         <link rel="stylesheet" href="css/style.css">
 
         <link rel="stylesheet" href="css/custom.css">
@@ -24,9 +23,6 @@
 
         <link rel="icon" type="image/png" href="images/logo/title-logo1616.jpg" sizes="16x16">
 
-
-
-        
 
 
 
@@ -121,6 +117,8 @@
 
                             <li><a href="TransactionHistory.php">Transactions History</a></li>
 
+                            <li><a href="GraphicalSales.php">Graphical Sales</a></li>
+
                             <li><a href="logout.php">Logout</a></li>
 
                         </ul>
@@ -138,6 +136,8 @@
                             <li><a href="DailyTransaction.php">Daily Transactions</a></li>
 
                             <li><a href="TransactionHistory.php">Transactions History</a></li>
+
+                            <li><a href="GraphicalSales.php">Graphical Sales</a></li>
 
                             <li><a href="logout.php">Logout</a></li>                          
 
