@@ -9,6 +9,8 @@ if($_SESSION['username']=="")
 ?>
 <!doctype html>
 
+
+
 <html lang="en">
 
      <head>
@@ -38,8 +40,9 @@ if($_SESSION['username']=="")
                $fromTimestamp =  date('d-m-Y');
                $toTimestamp = date('d-m-Y');
                 $query = "SELECT `TnDate`,`totSales`,`cashSales`,`bankSales`,`creditSales` FROM `daily_transaction` WHERE `TnDate`>='$fromTimestamp' AND `TnDate`<='$toTimestamp'";
-               //  echo  $fromTimestamp ;
+                echo  $fromTimestamp ;
                $result = mysqli_query($con, $query);
+               
 
           ?>
 
