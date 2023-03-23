@@ -7,6 +7,14 @@ if($_SESSION['username']=="")
   header("location:../logout.php"); 
 }
 ?>
+
+<?php
+
+$query = " SELECT `TnDate`, `totSales`, `cashSales`, `bankSales`, `creditSales` FROM `daily_transaction` ";
+$result = mysqli_query($con,$query);
+
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -18,9 +26,45 @@ if($_SESSION['username']=="")
 <title>Soulsoft || SKS</title> 
      <?php include './header1.php';?>
 
+     <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Charts</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Date','Total Sales', 'Cash Sales', 'Bank Sales', 'Credit Sales'],
+         
+        <?php
+          
+            While($chart = mysqli_fetch_assoc($result))
+            {               
+                echo "['".$chart['TnDate']."',".$chart['totSales'].",".$chart['cashSales'].",".$chart['bankSales'].",".$chart['creditSales']."],";
+            }
+        ?>
+
+
+        ]);
+
+        var options = {
+          title: 'My Daily Transaction'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
 <link href="cust_css/ourclient-style.css" rel="stylesheet"/>
 
-<body>
    <section class="service sec-padd2" style="background-color: #203364;padding: 20px 0 0px;margin-bottom: 10px;">
         <div class="container">
             <div class="section-title center" style="margin-bottom: 20px;">
@@ -30,19 +74,6 @@ if($_SESSION['username']=="")
             </div>              
         </div>
     </section> 
-
-
-          <?php
-
-               // $connect = mysqli_connect("localhost", "soulsoftin_root", "Prasad@321", "soulsoftin_SKS");
-               $fromTimestamp =  date('d-m-Y');
-               $toTimestamp = date('d-m-Y');
-                $query = "SELECT `TnDate`,`totSales`,`cashSales`,`bankSales`,`creditSales` FROM `daily_transaction` WHERE `TnDate`>='$fromTimestamp' AND `TnDate`<='$toTimestamp'";
-               //  echo  $fromTimestamp ;
-               $result = mysqli_query($con, $query);
-
-          ?>
-
 <!--
 
                <title>Outstanding</title>
@@ -67,38 +98,6 @@ if($_SESSION['username']=="")
                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 -->
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Sales', 'Daily Transaction'],
-          <?php
-          $sql = "SELECT * FROM daily_transaction";
-          $fire = mysqli_query($con,$sql);
-           while ( $result = mysqli_fetch_assoc($fire)) {
-              echo"['".$result['totSales']."',".$result['cashSales'].",".$result['backSales'].",".$result['creditSales']."],";
-           
-           }
-
-          ?>
-        
-        ]);
-
-        var options = {
-          title: 'Daily Transaction Sales'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-
      </head>
     
 
@@ -109,7 +108,7 @@ if($_SESSION['username']=="")
            <div class="container">
                 <!-- <h1 align="center">TRANSACTION HISTORY DETAILS</h3> -->
 
-                <CENTER><h2><B>TRANSACTION HISTORY DETAILS</B></h2></CENTER><BR><br>
+                <CENTER><h2><B>TRANSACTION CHARTS DETAILS</B></h2></CENTER><BR><br>
 
                 <br />
                 <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">               -->
@@ -161,7 +160,7 @@ if($_SESSION['username']=="")
             }
        ?>
 
-          <div id="piechart" style="width: 900px; height: 500px;"></div>
+               <div id="piechart" style="width: 900px; height: 500px;"></div>
 
                 <a class="thm-btn" href="Dashboard_SKS.php" style="transition: none 0s ease 0s; line-height: 20px; border-width: 0px; margin: 0px; padding: 20px 38px; letter-spacing: 0px; font-weight: 400; font-size: 14px;">GOTO DASHBOARD</a>
            </div>

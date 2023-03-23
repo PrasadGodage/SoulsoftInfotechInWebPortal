@@ -7,6 +7,18 @@ if($_SESSION['username']=="")
   header("location:../logout.php"); 
 }
 ?>
+<?php
+
+  $query = "SELECT * FROM daily_transaction";
+  $result = mysqli_query($con,$query);
+
+    while($value = mysqli_fetch_assoc($result))
+      {
+          echo $value['totSales'].$value['cashSales'].$values['bankSales'].$values['creditSales'];
+      }
+
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -24,7 +36,9 @@ if($_SESSION['username']=="")
     <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
+        
        var data = google.visualization.arrayToDataTable([
           ['Sales', 'Daily Transaction'],
           <?php
