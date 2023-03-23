@@ -160,6 +160,15 @@ $result = mysqli_query($con,$query);
             }
        ?>
 
+
+             <div class="container-fluid">
+                <div class="">
+
+                </div> 
+             </div>
+
+
+
                <div id="piechart" style="width: 900px; height: 500px;"></div>
 
                 <a class="thm-btn" href="Dashboard_SKS.php" style="transition: none 0s ease 0s; line-height: 20px; border-width: 0px; margin: 0px; padding: 20px 38px; letter-spacing: 0px; font-weight: 400; font-size: 14px;">GOTO DASHBOARD</a>
